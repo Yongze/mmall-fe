@@ -1,0 +1,30 @@
+/*
+* @Author: yw850
+* @Date:   2017-07-16 13:52:02
+* @Last Modified by:   yw850
+* @Last Modified time: 2017-07-16 14:05:59
+*/
+.nav{
+	background: #eee;
+	height: 30px;
+	line-height: 30px;
+}
+/*用户部分*/
+.nav .user{
+	float: left;
+}
+/*user.login没有空格，表示同一个元素*/
+.nav .user.login{
+	display: none;
+}
+.nav .user .link{
+	margin-right: 5px;
+}
+/*导航链接部分*/
+.nav .nav-list{
+	float: right;
+}
+.nav .nav-list .nav-item{
+	display: inline-block;
+	margin-left: 5px;
+}
