@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 13:16:44
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-16 13:28:31
+* @Last Modified time: 2017-07-19 01:36:23
 */
 .nav-simple{
 	height: 60px;
@@ -14,4 +14,5 @@
 	font-size: 26px;
 	font-weight: bold;
 	color: #c60023;
+	text-decoration: none;
 }

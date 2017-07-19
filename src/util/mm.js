@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-15 14:17:54
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-15 23:43:40
+* @Last Modified time: 2017-07-17 23:47:54
 */
 
 'use strict';
@@ -75,7 +75,7 @@ var _mm = {
 	},
 	//统一登录处理
 	doLogin	: function(){
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	goHome : function(){
 		window.location.href = "./index.html"

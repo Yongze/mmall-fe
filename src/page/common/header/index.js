@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 15:47:43
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-16 16:18:56
+* @Last Modified time: 2017-07-17 15:37:48
 */
 
 'use strict';
@@ -10,17 +10,17 @@ require('./index.css');
 var _mm 	= require('util/mm.js');
 //通用页面头部
 var header = {
-	init			: function(){
+	init : function(){
 		this.bindEvent();
 	},
-	onLoad			: function(){
+	onLoad : function(){
 		var keyword = _mm.getUrlParam('keyword');
 		//keyword 存在回填输入框
 		if (keyword) {
 			$('#search-input').val(keyword);
 		}
 	},
-	bindEvent		: function(){
+	bindEvent : function(){
 		//因为是jQuery的选择器，所以this不生效
 		var _this = this;
 		//点击搜索按钮以后做搜索提交
