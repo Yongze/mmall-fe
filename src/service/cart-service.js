@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 15:06:51
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-16 15:30:00
+* @Last Modified time: 2017-07-22 14:38:09
 */
 
 'use strict';
@@ -14,6 +14,14 @@ var _cart = {
 	getCartCount : function(resolve, reject){
 		_mm.request({
 			url 	:_mm.getServerUrl('/cart/get_cart_product_count.do'),
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	addToCart : function(productInfo, resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/add.do'),
+			data	: productInfo,
 			success	: resolve, 
 			error	: reject
 		});

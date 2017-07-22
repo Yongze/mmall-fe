@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-19 12:52:48
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 13:42:20
+* @Last Modified time: 2017-07-19 17:09:17
 */
 
 'use strict';
@@ -31,7 +31,7 @@ var page = {
 		$(document).on('click', '.btn-submit', function(){
 			var userInfo = {
 				password 			: $.trim($('#password').val()),
-				passwordNew 			: $.trim($('#password-new').val()),
+				passwordNew 		: $.trim($('#password-new').val()),
 				passwordConfirm 	: $.trim($('#password-confirm').val())
 			};
 			var validateResult = _this.validateForm(userInfo);
