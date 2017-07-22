@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 15:06:51
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-22 14:38:09
+* @Last Modified time: 2017-07-22 22:04:47
 */
 
 'use strict';
@@ -25,6 +25,67 @@ var _cart = {
 			success	: resolve, 
 			error	: reject
 		});
-	}
+	},
+	getCartList : function(resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/list.do'),
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	selectProduct : function(productId, resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/select.do'),
+			data	: {
+				productId : productId
+			},
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	unselectProduct : function(productId, resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/un_select.do'),
+			data	: {
+				productId : productId
+			},
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	selectAllProduct : function(resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/select_all.do'),
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	unselectAllProduct : function(resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/un_select_all.do'),
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	// 更新cart商品数量
+	updateProduct : function(productInfo, resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/update.do'),
+			data	: productInfo,
+			success	: resolve, 
+			error	: reject
+		});
+	},
+	// 删除指定商品
+	deleteProduct : function(productIds, resolve, reject){
+		_mm.request({
+			url 	:_mm.getServerUrl('/cart/delete_product.do'),
+			data	: {
+				productIds : productIds
+			},
+			success	: resolve, 
+			error	: reject
+		});
+	},
 }
 module.exports=_cart;

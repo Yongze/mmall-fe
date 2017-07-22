@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-12 22:48:22
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-20 20:17:31
+* @Last Modified time: 2017-07-22 18:31:47
 */
 var webpack                 = require('webpack');
 var ExtractTextPlugin       = require("extract-text-webpack-plugin");
@@ -26,7 +26,8 @@ var config = {
      entry: {
         'index'                 :['./src/page/index/index.js'],
         'list'                  :['./src/page/list/index.js'],
-     	'detail'                :['./src/page/detail/index.js'],
+        'detail'                :['./src/page/detail/index.js'],
+     	'cart'                  :['./src/page/cart/index.js'],
         'user-login'            :['./src/page/user-login/index.js'],
         'user-register'         :['./src/page/user-register/index.js'],
         'user-pass-reset'       :['./src/page/user-pass-reset/index.js'],
@@ -72,6 +73,7 @@ var config = {
         new HtmlWebpackPlugin(getHTMLConfig('index','首页')),
         new HtmlWebpackPlugin(getHTMLConfig('list','商品列表')),
         new HtmlWebpackPlugin(getHTMLConfig('detail','商品详情')),
+        new HtmlWebpackPlugin(getHTMLConfig('cart','购物车')),
         new HtmlWebpackPlugin(getHTMLConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHTMLConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
