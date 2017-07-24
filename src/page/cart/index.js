@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-22 18:32:47
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-23 02:13:56
+* @Last Modified time: 2017-07-23 11:38:16
 */
 'use strict';
 require('./index.css')
@@ -124,7 +124,7 @@ var page = {
 		//submit cart
 		$(document).on('click','.btn-submit', function(){
 			if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-				window.location.href = './confirm.html';
+				window.location.href = './order-confirm.html';
 			}else{
 				_mm.errorTips('Please select product before submit.');
 			}
