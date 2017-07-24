@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-12 22:48:22
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 18:13:06
+* @Last Modified time: 2017-07-24 20:52:40
 */
 var webpack                 = require('webpack');
 var ExtractTextPlugin       = require("extract-text-webpack-plugin");
@@ -15,6 +15,7 @@ var getHTMLConfig = function(name,title){
     return{
         template    :'./src/view/' + name + '.html',
         filename    :'view/' + name + '.html',
+        favicon     :'./favicon.ico',
         inject      :true,
         hash        :true,
         chunks      :['common',name],
@@ -38,12 +39,13 @@ var config = {
         'user-center'           :['./src/page/user-center/index.js'],
         'user-center-update'    :['./src/page/user-center-update/index.js'],
         'user-pass-update'      :['./src/page/user-pass-update/index.js'],
- 		'result'                :['./src/page/result/index.js'],
- 		'common'                :['./src/page/common/index.js'],
+        'result'                :['./src/page/result/index.js'],
+ 		'about'                 :['./src/page/result/index.js'],
+ 		'common'                :['./src/page/about/index.js'],
      },
      output: {
-         path           : './dist',
-         publicPath     : '/dist',
+         path           : __dirname + '/dist',
+         publicPath     : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.yw850.com/mmall-fe/dist/',
          filename       : 'js/[name].js'
      },
      externals: {
@@ -53,7 +55,15 @@ var config = {
         loaders: [
             { test: /\.css$/, loader:  ExtractTextPlugin.extract("style-loader","css-loader") },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-            { test: /\.string$/, loader: 'html-loader'}
+            { 
+                test: /\.string$/, 
+                loader: 'html-loader',
+                // removeAttributeQuotes这个属性决定要不要删除压缩过的HTML文件中的双引号
+                query : {
+                    minimized : true,
+                    removeAttributeQuotes : false
+                }
+            }
         ]
     },
     resolve : {
@@ -88,6 +98,7 @@ var config = {
         new HtmlWebpackPlugin(getHTMLConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHTMLConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHTMLConfig('user-pass-update', '修改密码')),
+        new HtmlWebpackPlugin(getHTMLConfig('about', '关于Mall')),
         new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果'))
      ]
  };
