@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-12 22:48:22
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 20:52:40
+* @Last Modified time: 2017-07-26 14:09:49
 */
 var webpack                 = require('webpack');
 var ExtractTextPlugin       = require("extract-text-webpack-plugin");
@@ -39,15 +39,24 @@ var config = {
         'user-center'           :['./src/page/user-center/index.js'],
         'user-center-update'    :['./src/page/user-center-update/index.js'],
         'user-pass-update'      :['./src/page/user-pass-update/index.js'],
+ 		'about'                 :['./src/page/about/index.js'],
         'result'                :['./src/page/result/index.js'],
- 		'about'                 :['./src/page/result/index.js'],
- 		'common'                :['./src/page/about/index.js'],
+        'common'                :['./src/page/common/index.js'],
      },
+
+     // 发布版本的路径
      output: {
          path           : __dirname + '/dist',
          publicPath     : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.yw850.com/mmall-fe/dist/',
          filename       : 'js/[name].js'
      },
+
+     // 在PC上测试
+     // output: {
+     //     path           : './dist',
+     //     publicPath     : '/dist',
+     //     filename       : 'js/[name].js'
+     // },
      externals: {
      	'jquery': 'window.jQuery'
      },
