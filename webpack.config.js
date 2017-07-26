@@ -2,13 +2,13 @@
 * @Author: yw850
 * @Date:   2017-07-12 22:48:22
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-26 14:09:49
+* @Last Modified time: 2017-07-26 15:04:40
 */
 var webpack                 = require('webpack');
 var ExtractTextPlugin       = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin       = require('html-webpack-plugin');
 var WEBPACK_ENV             = process.env.WEBPACK_ENV || 'dev';
-console.log(WEBPACK_ENV);
+console.log("|" + WEBPACK_ENV + "|");
 
 //获取html plugin参数的方法
 var getHTMLConfig = function(name,title){
@@ -44,19 +44,16 @@ var config = {
         'common'                :['./src/page/common/index.js'],
      },
 
-     // 发布版本的路径
-     output: {
-         path           : __dirname + '/dist',
-         publicPath     : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.yw850.com/mmall-fe/dist/',
-         filename       : 'js/[name].js'
-     },
-
-     // 在PC上测试
      // output: {
-     //     path           : './dist',
-     //     publicPath     : '/dist',
+     //     path           : __dirname + '/dist',
+     //     publicPath     : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.yw850.com/mmall-fe/dist/',
      //     filename       : 'js/[name].js'
      // },
+     output: {
+         path           : 'dev' == WEBPACK_ENV ? './dist' : __dirname + '/dist',
+         publicPath     : 'dev' == WEBPACK_ENV ? '/dist/' : '//s.yw850.com/mmall-fe/dist/',
+         filename       : 'js/[name].js'
+     },
      externals: {
      	'jquery': 'window.jQuery'
      },

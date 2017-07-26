@@ -57,7 +57,7 @@
 						{{productName}}
 					</a>
 				</td>
-				<td class="cell cell-price">${{currUnitPrice}}</td>
+				<td class="cell cell-price">${{currentUnitPrice}}</td>
 				<td class="cell cell-count">{{quantity}}</td>
 				<td class="cell cell-total">${{totalPrice}}</td>
 			</tr>
