@@ -1,10 +1,10 @@
 <table class="order-list-table header">
 	<tr>
 		<th class="cell cell-img">&nbsp;</th>
-		<th class="cell cell-info">商品信息</th>
-		<th class="cell cell-price">单价</th>
-		<th class="cell cell-count">数量</th>
-		<th class="cell cell-total">小计</th>
+		<th class="cell cell-info">Info</th>
+		<th class="cell cell-price">Unit price</th>
+		<th class="cell cell-count">Quantity</th>
+		<th class="cell cell-total">Total</th>
 	</tr>
 </table>
 {{#list}}
@@ -12,17 +12,17 @@
 	<tr>
 		<td colspan="5" class="order-info">
 			<span class="order-text">
-				<span>订单号: </span>
+				<span>OrderNo: </span>
 				<a class="link order-num" href="./order-detail.html?orderNumber={{orderNo}}" target="_blank">{{orderNo}}</a>
 			</span>
 			<span class="order-text">{{createTime}}</span>
-			<span class="order-text">收件人: {{receiverName}}</span>
-			<span class="order-text">订单状态: {{statusDesc}}</span>
+			<span class="order-text">Receiver: {{receiverName}}</span>
+			<span class="order-text">Status: {{statusDesc}}</span>
 			<span class="order-text">
-				<span>订单总价:</span>
+				<span>Order total price:</span>
 				<span class="order-total">${{payment}}</span>
 			</span>
-			<a class="link order-detail" href="./order-detail.html?orderNumber={{orderNo}}" target="_blank">查看详情></a>
+			<a class="link order-detail" href="./order-detail.html?orderNumber={{orderNo}}" target="_blank">Check detail>></a>
 		</td>
 	</tr>
     {{#orderItemVoList}}

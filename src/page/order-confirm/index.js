@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 11:38:45
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 11:52:17
+* @Last Modified time: 2017-07-27 13:22:27
 */
 
 'use strict';
@@ -47,7 +47,7 @@ var page = {
 					_mm.errorTips(errMsg);
 				});
 			}else{
-				_mm.errorTips('请选择地址后zai提交');
+				_mm.errorTips('Please choose an address before submit');
 			}
 		});
 		// 地址添加
@@ -103,7 +103,7 @@ var page = {
 			var addressListHtml = _mm.renderHtml(templateAddress, res);
 			$('.address-con').html(addressListHtml);
 		}, function(errMsg){
-			$('.address-con').html('<p class="err-tip">地址加载失败, 请刷新后重试</p>');
+			$('.address-con').html('<p class="err-tip">Fail to load address, please reload</p>');
 		});
 	},
 	loadProductList : function(){
@@ -116,7 +116,7 @@ var page = {
 			var productListHtml = _mm.renderHtml(templateProduct, res);
 			$('.product-con').html(productListHtml);
 		}, function(errMsg){
-			$('.product-con').html('<p class="err-tip">商品信息加载失败, 请刷新后重试</p>');
+			$('.product-con').html('<p class="err-tip">Fail to load goods, please reload</p>');
 		});
 	},
 	// reload地址后，保留选中状态

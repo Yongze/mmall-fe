@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 15:47:57
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 01:31:05
+* @Last Modified time: 2017-07-27 01:26:39
 */
 /*通用头部导航*/
 .header .logo{
@@ -30,7 +30,7 @@
 .header .search-con .search-btn{
 	position: absolute;
 	height: 44px;
-	width: 80px;
+	width: 95px;
 }
 /*面包屑导航*/
 .crumb{

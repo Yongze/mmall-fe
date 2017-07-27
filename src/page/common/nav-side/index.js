@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-16 21:45:18
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 13:20:30
+* @Last Modified time: 2017-07-27 13:26:05
 */
 
 'use strict';
@@ -14,10 +14,10 @@ var navSide = {
 	option: {
 		name: '',
 		navList: [
-			{name : 'user-center',desc : '个人中心', href :'./user-center.html'},
-			{name : 'order-list',desc : '我的订单', href :'./order-list.html'},
-			{name : 'user-pass-update',desc : '修改密码', href :'./user-pass-update.html'},
-			{name : 'about',desc : '关于MMall', href :'./about.html'}
+			{name : 'user-center',desc : 'Profile', href :'./user-center.html'},
+			{name : 'order-list',desc : 'My order', href :'./order-list.html'},
+			{name : 'user-pass-update',desc : 'Reset pass', href :'./user-pass-update.html'},
+			{name : 'about',desc : 'About MMall', href :'./about.html'}
 		]
 	},
 	init: function(option){

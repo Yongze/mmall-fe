@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-19 01:11:51
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 12:42:47
+* @Last Modified time: 2017-07-27 14:35:04
 */
 
 'use strict';
@@ -67,24 +67,24 @@ var page = {
 		};
 		
 		if (!_mm.validate(formData.phone, 'phone')) {
-			result.msg = '手机号格式不正确';
+			result.msg = 'Phone number is not correct';
 			return result;
 		}
 		if (!_mm.validate(formData.email, 'email')) {
-			result.msg = 'email格式不正确';
+			result.msg = 'email is not correct';
 			return result;
 		}
 		if (!_mm.validate(formData.question, 'require')) {
-			result.msg = '密码提示问题不能为空';
+			result.msg = 'Security question cannot be empty';
 			return result;
 		}
 		if (!_mm.validate(formData.answer, 'require')) {
-			result.msg = '密码提示问题的答案不能为空';
+			result.msg = 'The answer of security question cannot be empty';
 			return result;
 		}
 		//通过验证，返回正确提示
 		result.status 	= true;
-		result.msg 		= '验证通过';
+		result.msg 		= 'Validate';
 		return result;
 	}
 };

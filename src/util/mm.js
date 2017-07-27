@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-15 14:17:54
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-17 23:47:54
+* @Last Modified time: 2017-07-27 15:07:34
 */
 
 'use strict';
@@ -55,10 +55,10 @@ var _mm = {
 			return result;
 	},
 	successTips	: function(msg){
-		alert(msg || "操作成功");
+		alert(msg || "Operation success");
 	},
 	errorTips	: function(msg){
-		alert(msg || "哪里不对了吧");
+		alert(msg || "Something wrong:(");
 	},
 	validate : function(value, type){
 		var value = $.trim(value);
@@ -66,8 +66,9 @@ var _mm = {
 		if ('require' === type) {
 			return !!value;//强转成boolean
 		}
+		// for mobile like 04 1234 5678
 		if ("phone" === type) {
-			return /^1\d{10}$/.test(value);
+			return /^1\d{9}$/.test(value);
 		}
 		if ("email" === type) {
 			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);

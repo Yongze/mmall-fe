@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
     	<%= require('html-loader!./layout/head-common.html')%>
-    	<title><%= htmlWebpackPlugin.options.title%> - MMall电商平台</title>
+    	<title><%= htmlWebpackPlugin.options.title%> - MMall Online Shopping</title>
 	</head>
     <body>
     	<%= require('html-loader!./layout/nav.html')%>
@@ -20,22 +20,22 @@
     		<%= require('html-loader!./layout/nav-side.html')%>
     		<div class="content with-nav">
     			<div class="panel">
-    				<div class="panel-title">修改密码</div>
+    				<div class="panel-title">Reset password</div>
     				<div class="panel-body">
                         <div class="user-info">
                             <div class="form-line">
-                                <span class="label">原密码: </span>
+                                <span class="label">Old password: </span>
                                 <input type="password" class="input" id="password" autocomplete="off"/>
                             </div>
                             <div class="form-line">
-                                <span class="label">新密码: </span>
+                                <span class="label">New password: </span>
                                 <input type="password" class="input" id="password-new" autocomplete="off"/>
                             </div>
                             <div class="form-line">
-                                <span class="label">确认密码: </span>
+                                <span class="label">Confirm new password: </span>
                                 <input type="password" class="input" id="password-confirm" autocomplete="off"/>
                             </div>
-                            <span class="btn btn-submit">提交</span>
+                            <span class="btn btn-submit">Submit</span>
                         </div>
     				</div>
     			</div>

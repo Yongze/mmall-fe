@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-19 12:52:48
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 17:09:17
+* @Last Modified time: 2017-07-27 14:57:09
 */
 
 'use strict';
@@ -42,6 +42,7 @@ var page = {
 					passwordNew : userInfo.passwordNew
 				}, function(date, msg){
 					_mm.successTips(msg);
+					window.location.href = './user-center.html';
 				}, function(errMsg){
 					_mm.errorTips(errMsg);
 				});
@@ -57,20 +58,20 @@ var page = {
 		};
 		
 		if (!_mm.validate(formData.password, 'require')) {
-			result.msg = '原密码不能为空';
+			result.msg = 'Old password cannot be empty';
 			return result;
 		}
 		if (!formData.passwordNew || formData.passwordNew.length < 6) {
-			result.msg = '密码长度不得少于6位';
+			result.msg = 'Password cannot less than 6 letters or numbers';
 			return result;
 		}
 		if (formData.passwordNew !== formData.passwordConfirm) {
-			result.msg = '两次密码不一致';
+			result.msg = 'Password confirm is not corrent';
 			return result;
 		}
 		//通过验证，返回正确提示
 		result.status 	= true;
-		result.msg 		= '验证通过';
+		result.msg 		= 'validate';
 		return result;
 	}
 };

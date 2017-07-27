@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-24 14:56:03
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 16:35:04
+* @Last Modified time: 2017-07-27 13:44:34
 */
 /*订单信息*/
 .order-info .text-line{
@@ -10,7 +10,12 @@
 	line-height: 30px;
 }
 .order-info .text-line .text{
-	margin-right: 30px; 
+	font-size: 15px;
+    font-weight: bold;
+}
+.order-info .text-line .text-con{
+	margin-right: 30px;
+	font-size: 13px;
 }
 .order-info .btn{
 	width: 80px;
@@ -72,4 +77,9 @@
 .total .total-price{
 	font-weight: bold;
 	color: #c60023;
+}
+/*按钮*/
+.order-info .text-line .btn.order-cancel{
+	width: 105px;
+	background: #888;
 }

@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-17 20:14:50
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-17 21:36:26
+* @Last Modified time: 2017-07-27 15:05:44
 */
 
 'use strict';
@@ -87,41 +87,41 @@ var page = {
 			msg		: '',
 		};
 		if (!_mm.validate(formData.username, 'require')) {
-			result.msg = '用户名不能为空';
+			result.msg = 'Username cannot be empty';
 			return result;
 		}
 		if (!_mm.validate(formData.password, 'require')) {
-			result.msg = '密码不能为空';
+			result.msg = 'Password cannot be empty';
 			return result;
 		}
 		if (formData.password.length < 6) {
-			result.msg = '密码长度不能少于6位';
+			result.msg = 'Password cannot less than 6 letters or numbers';
 			return result;
 		}
 
 		if (formData.password !== formData.passwordConfirm) {
-			result.msg = '两次输入的密码不一致';
+			result.msg = 'Password confirm is not correct';
 			return result;
 		}
 		if (!_mm.validate(formData.phone, 'phone')) {
-			result.msg = '手机号格式不正确';
+			result.msg = 'Phone number is not correct';
 			return result;
 		}
 		if (!_mm.validate(formData.email, 'email')) {
-			result.msg = 'email格式不正确';
+			result.msg = 'Email format is not correct';
 			return result;
 		}
 		if (!_mm.validate(formData.question, 'require')) {
-			result.msg = '密码提示问题不能为空';
+			result.msg = 'Security question cannot be empty';
 			return result;
 		}
 		if (!_mm.validate(formData.answer, 'require')) {
-			result.msg = '密码提示问题的答案不能为空';
+			result.msg = 'The answer to security question cannot be empty';
 			return result;
 		}
 		//通过验证，返回正确提示
 		result.status 	= true;
-		result.msg 		= '验证通过';
+		result.msg 		= 'Validate';
 		return result;
 	}
 };
