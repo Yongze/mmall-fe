@@ -10,14 +10,14 @@
                 {{^allChecked}}
                 <input type="checkbox" class="cart-select-all"/>
                 {{/allChecked}}
-                    <span>全选</span>
+                    <span>Select all</span>
                 </label>
             </th>
-            <th class="cart-cell cell-info">商品信息</th>
-            <th class="cart-cell cell-price">单价</th>
-            <th class="cart-cell cell-count">数量</th>
-            <th class="cart-cell cell-total">合计</th>
-            <th class="cart-cell cell-opera">操作</th>
+            <th class="cart-cell cell-info">Product Info</th>
+            <th class="cart-cell cell-price">Unit price</th>
+            <th class="cart-cell cell-count">Quantity</th>
+            <th class="cart-cell cell-total">Total</th>
+            <th class="cart-cell cell-opera">Operation</th>
         </tr>
     </table>
 </div>
@@ -51,7 +51,7 @@
             </td>
             <td class="cart-cell cell-total">${{productTotalPrice}}</td>
             <td class="cart-cell cell-opera">
-                <span class="link cart-delete">删除</span>
+                <span class="link cart-delete">Delete</span>
             </td>
         </tr>
     </table>
@@ -66,26 +66,26 @@
             {{^allChecked}}
             <input type="checkbox" class="cart-select-all"/>
             {{/allChecked}}
-            <span>全选</span>
+            <span>Select all</span>
         </label>
     </div>
     <div class="delete-con">
         <span class="link delete-selected">
             <i class="fa fa-trash-o"></i>
-            <span>删除选中</span>
+            <span>Delete</span>
         </span>
     </div>
     <div class="submit-con">
-        <span>总价:</span>
+        <span class="total-sign">Total:</span>
         <span class="submit-total">${{cartTotalPrice}}</span>
-        <span class="btn btn-submit">去结算</span>
+        <span class="btn btn-submit">Pay</span>
     </div>
 </div>
 {{/notEmpty}}
 
 {{^notEmpty}}
 <p class="err-tip">
-    <span>您的公务车空空如也,</span>
-    <a href="./index.html" title="">立即去购物</a>
+    <span>Your cart is so empty</span>
+    <a href="./index.html" title="">go shopping right now</a>
 </p>
 {{/notEmpty}}

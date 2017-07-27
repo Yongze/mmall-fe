@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-24 12:08:45
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 13:45:44
+* @Last Modified time: 2017-07-27 14:21:37
 */
 
 'use strict';
@@ -56,7 +56,7 @@ var page = {
 				pages 			: res.pages
 			});
 		}, function(errMsg){
-			$listCon.html('<p class="err-tip">加载订单失败，请刷新后重试</p>');
+			$listCon.html('<p class="err-tip">Fail to reload, please refresh and try again</p>');
 		});
 	},
 	// dataFilter : function(data){

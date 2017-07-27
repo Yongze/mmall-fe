@@ -14,5 +14,5 @@
 	</li>
 {{/list}}
 {{^list}}
-	<p class="err-tip">很抱歉，找不着您要的商品</p>
+	<p class="err-tip">Sorry, we cannot find the product</p>
 {{/list}}

@@ -2,14 +2,14 @@
 <html lang="en">
 	<head>
     	<%= require('html-loader!./layout/head-common.html')%>
-    	<title><%= htmlWebpackPlugin.options.title%> - MMall电商平台</title>
+    	<title><%= htmlWebpackPlugin.options.title%> - MMall Online Shopping</title>
 	</head>
     <body>
     	<%= require('html-loader!./layout/nav-simple.html')%>
     	<div class="page-wrap">
     		<div class="w">
     			<div class="user-con">
-    				<div class="user-title">用户注册</div>
+    				<div class="user-title">Registration</div>
     				<div class="user-box">
 	    				<div class="error-item">
 	    					<i class="fa fa-minus-circle error-icon"></i>
@@ -19,47 +19,47 @@
     						<label class="user-label" for="username">
     							<i class="fa fa-user"></i>
     						</label>
-    						<input class="user-content" id="username" placeholder="请输入用户名" autocomplete="off"></input>
+    						<input class="user-content" id="username" placeholder="Please enter username" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="password">
     							<i class="fa fa-lock"></i>
     						</label>
-    						<input type="password" class="user-content" id="password" placeholder="请输入密码" autocomplete="off"></input>
+    						<input type="password" class="user-content" id="password" placeholder="Please enter password" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="password-confirm">
     							<i class="fa fa-lock"></i>
     						</label>
-    						<input type="password" class="user-content" id="password-confirm" placeholder="请再次输入密码" autocomplete="off"></input>
+    						<input type="password" class="user-content" id="password-confirm" placeholder="Please enter password again" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="phone">
     							<i class="fa fa-phone"></i>
     						</label>
-    						<input class="user-content" id="phone" placeholder="请输入手机号" autocomplete="off"></input>
+    						<input class="user-content" id="phone" placeholder="Please enter phone number" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="email">
     							<i class="fa fa-envelope"></i>
     						</label>
-    						<input class="user-content" id="email" placeholder="请输入邮箱地址" autocomplete="off"></input>
+    						<input class="user-content" id="email" placeholder="Please enter email" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="question">
     							<i class="fa fa-question"></i>
     						</label>
-    						<input class="user-content" id="question" placeholder="请输入密码提示问题" autocomplete="off"></input>
+    						<input class="user-content" id="question" placeholder="Please set a security question" autocomplete="off"></input>
     					</div>
     					<div class="user-item">
     						<label class="user-label" for="answer">
     							<i class="fa fa-key"></i>
     						</label>
-    						<input class="user-content" id="answer" placeholder="请输入密码提示问题答案" autocomplete="off"></input>
+    						<input class="user-content" id="answer" placeholder="Please set an answer to security question" autocomplete="off"></input>
     					</div>
-    					<div class="btn btn-submit" id="submit">立即注册</div>
+    					<div class="btn btn-submit" id="submit">Sign up</div>
     					<div class="link-item">
-    						<a class="link" href="./user-login.html">已有账号，去登陆>></a>
+    						<a class="link" href="./user-login.html">Sign up before, go to sign in>></a>
     					</div>
     				</div>
     			</div>

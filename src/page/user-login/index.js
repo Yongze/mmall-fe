@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-12 23:10:07
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-17 18:38:21
+* @Last Modified time: 2017-07-27 14:41:47
 */
 
 'use strict';
@@ -67,16 +67,16 @@ var page = {
 			msg		: '',
 		};
 		if (!_mm.validate(formData.username, 'require')) {
-			result.msg = '用户名不能为空';
+			result.msg = 'Username cannot be empty';
 			return result;
 		}
 		if (!_mm.validate(formData.password, 'require')) {
-			result.msg = '密码不能为空';
+			result.msg = 'Password cannot be empty';
 			return result;
 		}
 		//通过验证，返回正确提示
 		result.status 	= true;
-		result.msg 		= '验证通过';
+		result.msg 		= 'Validate';
 		return result;
 	}
 };

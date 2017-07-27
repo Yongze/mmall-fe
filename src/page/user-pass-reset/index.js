@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-17 22:35:35
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 00:19:05
+* @Last Modified time: 2017-07-27 14:48:41
 */
 
 'use strict';
@@ -50,7 +50,7 @@ var page = {
 					formError.show(errMsg);
 				});
 			}else{
-				formError.show('请输入用户名');
+				formError.show('Please enter username');
 			}
 		});
 		//按下回车，提交
@@ -77,7 +77,7 @@ var page = {
 					formError.show(errMsg);
 				});
 			}else{
-				formError.show('请输入密码提示问题答案');
+				formError.show('Please enter the answer of your security question');
 			}
 		});
 
@@ -96,7 +96,7 @@ var page = {
 					formError.show(errMsg);
 				});
 			}else{
-				formError.show('请输入不少于6位的新密码');
+				formError.show('Please set a password more than 6 letters/numbers');
 			}
 		});
 	},

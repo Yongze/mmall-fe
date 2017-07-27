@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 11:38:55
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 11:24:52
+* @Last Modified time: 2017-07-27 15:44:11
 */
 /*地址部分的样式*/
 .address-item, .address-add{
@@ -183,4 +183,5 @@
 	height: 30px;
 	line-height: 30px;
 	font-size: 13px;
+	float: right;
 }
