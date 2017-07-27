@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 20:26:11
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-24 16:06:01
+* @Last Modified time: 2017-07-27 13:14:15
 */
 
 'use strict';
@@ -50,7 +50,7 @@ var addressModal = {
 				// 使用新地址且验证通过
 			if (!isUpdate && receiverInfo.status) {
 				_address.save(receiverInfo.data, function(res){
-					_mm.successTips('地址添加成功');
+					_mm.successTips('Succeed to add new address');
 					_this.hide();
 					typeof _this.option.onSuccess === 'function' && _this.option.onSuccess(res);
 				}, function(errMsg){
@@ -60,7 +60,7 @@ var addressModal = {
 			// 更新收件人. 并且验证通过
 			else if (isUpdate && receiverInfo.status) {
 				_address.update(receiverInfo.data, function(res){
-					_mm.successTips('地址修改成功');
+					_mm.successTips('Succeed to edit address');
 					_this.hide();
 					typeof _this.option.onSuccess === 'function' && _this.option.onSuccess(res);
 				}, function(errMsg){
@@ -69,7 +69,7 @@ var addressModal = {
 			}
 			// 验证不通过
 			else{
-				_mm.errorTips(receiverInfo.errMsg || '地址验证不通过');
+				_mm.errorTips(receiverInfo.errMsg || 'The addres is not valid.');
 			}
 		});
 		// 避免点击modal区时关闭窗口
@@ -106,7 +106,7 @@ var addressModal = {
 	},
 	// 获取select框的选项
 	getSelectOption : function(optionArray){
-		var html = '<option value="">请选择</option>';
+		var html = '<option value="">State</option>';
 		for (var i = 0, iLength = optionArray.length; i < iLength; i++) {
 			html +=	'<option value=' + optionArray[i] + '>' + optionArray[i]  + '</option>'
 		}
@@ -131,15 +131,15 @@ var addressModal = {
 
 		// 验证
 		if (!receiverInfo.receiverName) {
-			result.errMsg = '请输入收件人姓名';
+			result.errMsg = 'Please enter receiver name';
 		}else if(!receiverInfo.receiverProvince){
-			result.errMsg = '请选择收件人所在省份';
+			result.errMsg = 'Please select the state';
 		}else if(!receiverInfo.receiverCity){
-			result.errMsg = '请选择收件人所在city';
+			result.errMsg = 'Please select the city/suburb';
 		}else if(!receiverInfo.receiverMobile){
-			result.errMsg = '请输入收件人phone number';
+			result.errMsg = 'Please enter phone number';
 		}else if(!receiverInfo.receiverAddress){
-			result.errMsg = '请输入收件人detailed address';
+			result.errMsg = "Please enter receiver's detailed address";
 		}else{
 			result.status = true;
 			result.data   = receiverInfo;

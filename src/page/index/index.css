@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-13 00:20:55
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 22:16:25
+* @Last Modified time: 2017-07-27 15:57:39
 */
 /*keyword-list*/
 .keywords-list{
@@ -160,4 +160,71 @@
 	width: 80%;/*是该容器的宽度，不是页面*/
 	height: 75%;
 	border: none;
+}
+
+/*modal*/
+.modal{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/*如果是高级浏览器里，background定义会被覆盖*/
+	background: #eee;
+	background: rgba(0,0,0,.4);
+	z-index: 1000;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal .modal-container{
+	width: 700px;
+	/*auto就是剧中*/
+	margin: 50px auto;
+	background: #fff;
+	border-radius: 2px;
+}
+.modal .modal-container .modal-header{
+	position: relative;
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+.modal .modal-container .modal-header .modal-title{
+	font-size: 14px;
+}
+.modal .modal-container .modal-header .close{
+	position: absolute;
+	padding: 10px;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+.modal .modal-container .modal-body{
+	padding: 15px;
+}
+
+/*form*/
+.form .form-line{
+	margin: 5px 0;
+	overflow: hidden;
+}
+.form .form-line .label{
+	display: block;
+	float: left;
+	/*width: 85px;*/
+	/*text-align: right;*/
+	height: 70px;
+	line-height: 30px;
+	margin: 15px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.modal-header .modal-title .required{
+	color: red;
+}
+.form .form-line .btn{
+	margin-left: 95px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+	float: right;
 }

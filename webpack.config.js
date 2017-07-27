@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-12 22:48:22
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-26 15:04:40
+* @Last Modified time: 2017-07-27 16:23:46
 */
 var webpack                 = require('webpack');
 var ExtractTextPlugin       = require("extract-text-webpack-plugin");
@@ -90,22 +90,22 @@ var config = {
         //吧css单独打包到文件
         new ExtractTextPlugin("css/[name].css"),
         //html模板的处理
-        new HtmlWebpackPlugin(getHTMLConfig('index','首页')),
-        new HtmlWebpackPlugin(getHTMLConfig('list','商品列表')),
-        new HtmlWebpackPlugin(getHTMLConfig('detail','商品详情')),
-        new HtmlWebpackPlugin(getHTMLConfig('cart','购物车')),
-        new HtmlWebpackPlugin(getHTMLConfig('order-confirm','订单确认')),
-        new HtmlWebpackPlugin(getHTMLConfig('order-list','订单列表')),
-        new HtmlWebpackPlugin(getHTMLConfig('order-detail','订单详情')),
-        new HtmlWebpackPlugin(getHTMLConfig('payment','订单支付')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-login', '用户登录')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-register', '用户注册')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', '找回密码')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-center', '个人中心')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-center-update', '修改个人信息')),
-        new HtmlWebpackPlugin(getHTMLConfig('user-pass-update', '修改密码')),
-        new HtmlWebpackPlugin(getHTMLConfig('about', '关于Mall')),
-        new HtmlWebpackPlugin(getHTMLConfig('result', '操作结果'))
+        new HtmlWebpackPlugin(getHTMLConfig('index','Home')),
+        new HtmlWebpackPlugin(getHTMLConfig('list','List of goods')),
+        new HtmlWebpackPlugin(getHTMLConfig('detail','Product details')),
+        new HtmlWebpackPlugin(getHTMLConfig('cart','Cart')),
+        new HtmlWebpackPlugin(getHTMLConfig('order-confirm','Order confirm')),
+        new HtmlWebpackPlugin(getHTMLConfig('order-list','Order list')),
+        new HtmlWebpackPlugin(getHTMLConfig('order-detail','Order detail')),
+        new HtmlWebpackPlugin(getHTMLConfig('payment','Order payment')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-login', 'Sign in')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-register', 'Sign up')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-pass-reset', 'Find password')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-center', 'Profile')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-center-update', 'Edit Profile')),
+        new HtmlWebpackPlugin(getHTMLConfig('user-pass-update', 'Reset password')),
+        new HtmlWebpackPlugin(getHTMLConfig('about', 'About Mall')),
+        new HtmlWebpackPlugin(getHTMLConfig('result', 'Result'))
      ]
  };
 

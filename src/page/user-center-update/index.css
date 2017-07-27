@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-19 01:11:57
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-19 16:56:29
+* @Last Modified time: 2017-07-27 14:36:20
 */
 .form-line{
 	margin-bottom: 10px;
@@ -14,6 +14,7 @@
 	display: inline-block;
 	width: 60px;
 	text-align: left;
+	margin-right: 20px;
 }
 .form-line .input{
 	height: 25px;
