@@ -43,7 +43,7 @@
 				</div>
 				<div class="form-line">
 					<label class="label" for="receiver-zip">Postcode:</label>
-					<input class="form-item" id="receiver-zip" value="{{data.receiverZip}}" placeholder="如: 2000" />
+					<input class="form-item" id="receiver-zip" value="{{data.receiverZip}}" placeholder="Like: 2000" />
 				</div>
 				<div class="form-line">
                     <input type="hidden" value="{{data.id}}" id="receiver-id">

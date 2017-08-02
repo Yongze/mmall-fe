@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 20:26:11
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-08-03 01:01:56
+* @Last Modified time: 2017-08-03 01:12:43
 */
 
 'use strict';
@@ -107,7 +107,7 @@ var addressModal = {
 	},
 	// 获取select框的选项
 	getSelectOption : function(optionArray){
-		var html = '<option value="">State</option>';
+		var html = '<option value="">city</option>';
 		for (var i = 0, iLength = optionArray.length; i < iLength; i++) {
 			html +=	'<option value=' + optionArray[i] + '>' + optionArray[i]  + '</option>'
 		}
