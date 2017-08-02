@@ -2,13 +2,14 @@
 * @Author: yw850
 * @Date:   2017-07-23 20:26:11
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-27 13:14:15
+* @Last Modified time: 2017-08-03 01:01:56
 */
 
 'use strict';
 var _mm 					= require('util/mm.js');
 var _address				= require('service/address-service.js');
-var _cities					= require('util/cities/index.js');
+// var _cities					= require('util/cities/index.js');//China address
+var _cities					= require('util/cities/address.js');//Australia address
 var templateAddressModal	= require('./address-modal.string');
 
 var addressModal = {
