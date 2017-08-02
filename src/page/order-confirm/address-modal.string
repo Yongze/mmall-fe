@@ -23,10 +23,10 @@
 						<span class="required">*</span>City/suburb:
 					</label>
 					<select class="form-item" id="receiver-province">
-                        <option value="">state</option>
+                        <option value="">--STATE--</option>
 					</select>
 					<select class="form-item" id="receiver-city">
-                        <option value="">city</option>
+                        <option value="">--CITY--</option>
 					</select>
 				</div>
 				<div class="form-line">

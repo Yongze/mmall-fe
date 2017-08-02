@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 20:26:11
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-08-03 01:12:43
+* @Last Modified time: 2017-08-03 01:28:06
 */
 
 'use strict';
@@ -85,7 +85,7 @@ var addressModal = {
 	loadProvince : function(){
 		var provinces = _cities.getProvinces() || [],
 			$provinceSelect = this.$modalWrap.find('#receiver-province');
-		$provinceSelect.html(this.getSelectOption(provinces));
+		$provinceSelect.html(this.getSelectOption(provinces, 'STATE'));
 
 		//如果更新地址并且有省份,做省份回填
 		if (this.option.isUpdate && this.option.data.receiverProvince) {
@@ -97,7 +97,7 @@ var addressModal = {
 	loadCities : function(provinceName){
 		var cities 			= _cities.getCities(provinceName) || [],
 			$citySelect 	= this.$modalWrap.find('#receiver-city');
-		$citySelect.html(this.getSelectOption(cities)); 
+		$citySelect.html(this.getSelectOption(cities, 'CITY')); 
 
 		//如果更新地址并且有city,做city回填
 		if (this.option.isUpdate && this.option.data.receiverCity) {
@@ -106,8 +106,8 @@ var addressModal = {
 		}
 	},
 	// 获取select框的选项
-	getSelectOption : function(optionArray){
-		var html = '<option value="">city</option>';
+	getSelectOption : function(optionArray, type){
+		var html = '<option value="">--' +  type + '--</option>';
 		for (var i = 0, iLength = optionArray.length; i < iLength; i++) {
 			html +=	'<option value=' + optionArray[i] + '>' + optionArray[i]  + '</option>'
 		}

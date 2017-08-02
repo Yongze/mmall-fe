@@ -2,7 +2,7 @@
 * @Author: yw850
 * @Date:   2017-07-23 11:38:55
 * @Last Modified by:   yw850
-* @Last Modified time: 2017-07-27 15:44:11
+* @Last Modified time: 2017-08-03 01:41:15
 */
 /*地址部分的样式*/
 .address-item, .address-add{
@@ -177,6 +177,10 @@
 	line-height: 30px;
 	outline: none;
 	margin-right: 10px;
+}
+.form .form-line select.form-item{
+	text-align: center;
+  	text-align-last: center;
 }
 .form .form-line .btn{
 	margin-left: 95px;
